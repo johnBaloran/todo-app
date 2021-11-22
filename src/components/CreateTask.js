@@ -11,11 +11,12 @@ const CreateTask = ({ addTask }) => {
     const todo = {
       title: value,
       completed: false,
+      dateTodoIsSet: Date.now(),
     };
     addTask(todo);
-
     setValue("");
   };
+
   return (
     <form onSubmit={handleSubmit} className="create-task">
       <input

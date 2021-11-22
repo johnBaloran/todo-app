@@ -7,10 +7,6 @@ const Todo = () => {
 
   useEffect(() => {
     // make a reference to our database
-    const myDate = new Date(); // your date object
-    myDate.setHours(myDate.getHours() + 24);
-    console.log(myDate);
-
     const dbRef = firebase.database().ref("Todo");
     // add event listener to watch for changes to our database
 
@@ -18,13 +14,15 @@ const Todo = () => {
       // variable to store a new state
       const data = response.val();
       const newTasks = [];
-
+      const dateAppIsUsed = Date.now(); // date now in milliseconds since 1970
       for (let property in data) {
-        console.log(data[property]);
+        if (dateAppIsUsed - data[property].dateTodoIsSet > 86400000) {
+          const dbRef = firebase.database().ref("Todo");
+          dbRef.child(property).remove();
+        }
 
         newTasks.push({ id: property, ...data[property] });
       }
-      console.log(newTasks);
 
       // update state with new state
       setTasks(newTasks);
