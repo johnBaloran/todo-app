@@ -8,8 +8,11 @@ const CreateTask = ({ addTask }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!value) return;
-
-    addTask(value);
+    const todo = {
+      title: value,
+      completed: false,
+    };
+    addTask(todo);
 
     setValue("");
   };
@@ -22,6 +25,7 @@ const CreateTask = ({ addTask }) => {
         placeholder="Add a new task"
         onChange={handleChange}
       />
+      <button type="submit">Add</button>
     </form>
   );
 };
