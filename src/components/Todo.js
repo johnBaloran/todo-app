@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import firebase from "../firebase.js";
 import CreateTask from "./CreateTask";
 import Task from "./Task";
-const Todo = () => {
+const Todo = ({ handleComplete, fireworksHandler, fireworks }) => {
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
@@ -26,8 +26,10 @@ const Todo = () => {
 
       // update state with new state
       setTasks(newTasks);
+      // a function that grabs array and counts number of complete and incomplete tasks
+      handleComplete(newTasks);
     });
-  }, []);
+  }, [handleComplete]);
 
   const addTaskHandler = (task) => {
     const dbRef = firebase.database().ref("Todo");
@@ -36,14 +38,22 @@ const Todo = () => {
 
   return (
     <div className="todo-container">
-      <h2 className="header">TODO - ITEMS</h2>
+      <h2 className="header">TODO - TODAY</h2>
       <CreateTask addTask={addTaskHandler} />
 
       <ul className="tasks">
         {tasks.length >= 1 ? (
-          tasks.map((task) => <Task task={task} key={task.id} id={task.id} />)
+          tasks.map((task) => (
+            <Task
+              task={task}
+              key={task.id}
+              id={task.id}
+              fireworksHandler={fireworksHandler}
+              fireworks={fireworks}
+            />
+          ))
         ) : (
-          <h2>"Hooray You're Free For Today"</h2>
+          <h2>Hooray You're Free For Today</h2>
         )}
       </ul>
     </div>

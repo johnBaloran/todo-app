@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import firebase from "../firebase.js";
-
-import CreateTask from "./CreateTask";
-
-const Task = ({ task, date }) => {
+const Task = ({ task }) => {
   const [edit, setEdit] = useState(false);
   const [newTitle, setNewTitle] = useState(task.title);
-
   const completeTaskHandler = () => {
     const dbRef = firebase.database().ref("Todo");
     dbRef.child(task.id).update({ completed: !task.completed });
