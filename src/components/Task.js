@@ -70,8 +70,8 @@ const Task = ({ task }) => {
             onChange={handleChange}
             value={newTitle}
             autoFocus
+            className="inputEdit"
           />
-          <button type="submit">Edit</button>
         </form>
       )}
     </li>

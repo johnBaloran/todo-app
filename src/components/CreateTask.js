@@ -18,15 +18,17 @@ const CreateTask = ({ addTask }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="createTask">
-      <input
-        type="text"
-        className="input"
-        value={value}
-        placeholder="New Task..."
-        onChange={handleChange}
-      />
-    </form>
+    <section>
+      <form onSubmit={handleSubmit} className="createTask">
+        <input
+          type="text"
+          className="input"
+          value={value}
+          placeholder="New Task..."
+          onChange={handleChange}
+        />
+      </form>
+    </section>
   );
 };
 

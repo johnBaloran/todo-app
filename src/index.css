@@ -60,7 +60,8 @@ header {
 }
 .taskDescription {
   display: flex;
-  justify-content: space-between;
+  flex-basis: 80%;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -68,9 +69,18 @@ header {
   text-transform: uppercase;
   font-size: 1.25rem;
   padding: 10px 10px 10px 0;
+  word-break: break-all;
+  text-align: start;
 }
 .taskTimeLeft {
   font-size: 0.9rem;
+}
+
+.inputEdit {
+  flex-basis: 100%;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  border: none;
 }
 
 .buttons button {
@@ -85,6 +95,9 @@ header {
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
   .wrapper {
     width: 60%;
   }
@@ -92,6 +105,9 @@ header {
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
   .wrapper {
     width: 90%;
   }

@@ -37,25 +37,26 @@ const Todo = ({ handleComplete, fireworksHandler, fireworks }) => {
   };
 
   return (
-    <div className="todo-container">
+    <main className="todo-container">
       <CreateTask addTask={addTaskHandler} />
-
-      <ul className="tasks">
-        {tasks.length >= 1 ? (
-          tasks.map((task) => (
-            <Task
-              task={task}
-              key={task.id}
-              id={task.id}
-              fireworksHandler={fireworksHandler}
-              fireworks={fireworks}
-            />
-          ))
-        ) : (
-          <h2>Hooray You're Free For Today</h2>
-        )}
-      </ul>
-    </div>
+      <section>
+        <ul className="tasks">
+          {tasks.length >= 1 ? (
+            tasks.map((task) => (
+              <Task
+                task={task}
+                key={task.id}
+                id={task.id}
+                fireworksHandler={fireworksHandler}
+                fireworks={fireworks}
+              />
+            ))
+          ) : (
+            <h2>Hooray You're Free For Today</h2>
+          )}
+        </ul>
+      </section>
+    </main>
   );
 };
 
