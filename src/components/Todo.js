@@ -38,7 +38,6 @@ const Todo = ({ handleComplete, fireworksHandler, fireworks }) => {
 
   return (
     <div className="todo-container">
-      <h2 className="header">TODO - TODAY</h2>
       <CreateTask addTask={addTaskHandler} />
 
       <ul className="tasks">

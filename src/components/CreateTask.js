@@ -18,15 +18,17 @@ const CreateTask = ({ addTask }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="create-task">
+    <form onSubmit={handleSubmit} className="createTask">
       <input
         type="text"
         className="input"
         value={value}
-        placeholder="Add a new task"
+        placeholder="New Task..."
         onChange={handleChange}
       />
-      <button type="submit">Add</button>
+      {/* <button type="submit">
+        <i class="fas fa-plus fa-2x"></i>
+      </button> */}
     </form>
   );
 };

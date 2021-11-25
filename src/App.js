@@ -16,7 +16,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App wrapper">
       <Navbar complete={complete} incomplete={incomplete} />
       <Todo handleComplete={handleComplete} />
     </div>

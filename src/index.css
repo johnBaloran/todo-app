@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  width: 30%;
+  margin: 0 auto;
+  border: black solid;
+}
+
+h1 {
+  padding: 20px 20px 20px 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+.App {
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  padding: 25px;
+}
+
+header {
+  align-items: center;
+  padding-bottom: 20px;
+}
+.createTask {
+  padding-bottom: 10px;
+  text-align: start;
+}
+
+.createTask .input {
+  flex-basis: 100%;
+  text-transform: uppercase;
+  font-size: 20px;
+  border: none;
+}
+.createTask .input:focus {
+  outline: none;
+}
+
+.taskItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+.taskDescription {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.taskTodo {
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 10px 10px 10px 0;
+}
+.taskTimeLeft {
+  font-size: 15px;
+}
+
+.buttons button {
+  margin-right: 5px;
+}

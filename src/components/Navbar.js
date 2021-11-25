@@ -1,6 +1,8 @@
 const Navbar = ({ complete, incomplete }) => {
   return (
     <header>
+      <h1 className="header">TODO - TODAY</h1>
+
       <nav>
         <ul>
           <li>

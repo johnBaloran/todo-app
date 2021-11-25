@@ -33,29 +33,34 @@ const Task = ({ task }) => {
 
   return (
     <li
-      className="task"
+      className="taskItem"
       style={{ textDecoration: task.completed ? "line-through" : "" }}
     >
       {!edit && (
         <>
-          <p
-            onClick={() => {
-              completeTaskHandler();
-            }}
-          >
-            {task.title}
-          </p>
-          <p>{`${hoursLeft()}h`}</p>
-          <button type="button" onClick={() => setEdit(true)}>
-            edit
-          </button>
-          <button
-            onClick={() => {
-              removeTaskHandler();
-            }}
-          >
-            remove
-          </button>
+          <div className="taskDescription">
+            <p
+              onClick={() => {
+                completeTaskHandler();
+              }}
+              className="taskTodo"
+            >
+              {task.title}
+            </p>
+            <p className="taskTimeLeft">{`${hoursLeft()}h`}</p>
+          </div>
+          <div className="buttons">
+            <button type="button" onClick={() => setEdit(true)}>
+              <i class="far fa-edit"></i>
+            </button>
+            <button
+              onClick={() => {
+                removeTaskHandler();
+              }}
+            >
+              <i class="far fa-trash-alt"></i>
+            </button>
+          </div>
         </>
       )}
       {edit && (
