@@ -51,14 +51,14 @@ const Task = ({ task }) => {
           </div>
           <div className="buttons">
             <button type="button" onClick={() => setEdit(true)}>
-              <i class="far fa-edit"></i>
+              <i class="far fa-edit fa-2x"></i>
             </button>
             <button
               onClick={() => {
                 removeTaskHandler();
               }}
             >
-              <i class="far fa-trash-alt"></i>
+              <i class="far fa-trash-alt fa-2x"></i>
             </button>
           </div>
         </>

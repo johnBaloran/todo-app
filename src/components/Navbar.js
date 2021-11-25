@@ -7,12 +7,12 @@ const Navbar = ({ complete, incomplete }) => {
         <ul>
           <li>
             <p>
-              Incomplete Todo: <span>{incomplete}</span>
+              Incomplete : <span>{incomplete}</span>
             </p>
           </li>
           <li>
             <p>
-              Complete Todo: <span>{complete}</span>
+              Complete : <span>{complete}</span>
             </p>
           </li>
         </ul>

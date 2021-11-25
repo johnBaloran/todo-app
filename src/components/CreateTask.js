@@ -26,9 +26,6 @@ const CreateTask = ({ addTask }) => {
         placeholder="New Task..."
         onChange={handleChange}
       />
-      {/* <button type="submit">
-        <i class="fas fa-plus fa-2x"></i>
-      </button> */}
     </form>
   );
 };

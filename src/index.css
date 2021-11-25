@@ -4,14 +4,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  font-size: 16px;
+}
 .wrapper {
-  width: 30%;
-  margin: 0 auto;
+  width: 40%;
+  margin: 50px auto;
   border: black solid;
+  border-radius: 10px;
 }
 
 h1 {
-  padding: 20px 20px 20px 0;
+  padding-bottom: 10px;
 }
 
 li {
@@ -41,7 +45,7 @@ header {
 .createTask .input {
   flex-basis: 100%;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 1.25rem;
   border: none;
 }
 .createTask .input:focus {
@@ -62,13 +66,33 @@ header {
 
 .taskTodo {
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 1.25rem;
   padding: 10px 10px 10px 0;
 }
 .taskTimeLeft {
-  font-size: 15px;
+  font-size: 0.9rem;
 }
 
 .buttons button {
   margin-right: 5px;
+}
+
+@media (max-width: 940px) {
+  .wrapper {
+    width: 50%;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .wrapper {
+    width: 60%;
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .wrapper {
+    width: 90%;
+  }
 }
